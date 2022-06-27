@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import {Outlet, Link} from 'react-router-native';
 import LinearGradient from 'react-native-linear-gradient';
-// import Map from '../assets/images/map.svg';
+import {LinkIcon, ConfigIcon, StarIcon, BackIcon} from './IconBox';
 
 function HeaderTop() {
   return (
@@ -14,13 +14,16 @@ function HeaderTop() {
         colors={['#1a8acc', '#1e8aa4']}>
         <View style={styles.header}>
           <Link to="/" style={styles.link}>
-            <Text>웹</Text>
+            <LinkIcon />
           </Link>
           <View style={styles.logo}>
-            <Text>로고</Text>
+            <Image
+              style={styles.logo_img}
+              source={require('../assets/images/Itemmania.png')}
+            />
           </View>
           <Link to="/settings" style={styles.config}>
-            <Text>설정</Text>
+            <ConfigIcon />
           </Link>
         </View>
       </LinearGradient>
@@ -56,6 +59,10 @@ const styles = StyleSheet.create({
     flex: 4,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logo_img: {
+    width: '100%',
+    height: '100%',
   },
   config: {
     flex: 1,

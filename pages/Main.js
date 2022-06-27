@@ -1,26 +1,33 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Container from './Container';
+import {useTabChange} from '../App';
 
-function MenuTab() {
+function MenuTab({tab, setTab}) {
   return (
     <>
       <View style={styles.menu_tab}>
-        <View style={styles.tab_item}>
+        <View
+          testId="changeToHomeList"
+          style={styles.tab_item}
+          onClick={useTabChange('home')}>
           <Text style={styles.bdr}>홈</Text>
         </View>
-        <View style={styles.tab_item}>
+        <View
+          testId="changeToSearchList"
+          style={styles.tab_item}
+          onClick={useTabChange('search')}>
           <Text style={styles.bdr}>게임검색</Text>
         </View>
-        <View style={styles.tab_item}>
+        <View testId="changeToFavoriteList" style={styles.tab_item}>
           <Text style={styles.bdr}>관심게임</Text>
         </View>
-        <View style={styles.tab_item}>
+        <View testId="changeToRankList" style={styles.tab_item}>
           <Text style={{textAlign: 'center'}}>거래순위</Text>
         </View>
       </View>
       <View style={styles.tab_bar}>
-        <View style={styles.tab_indicate} />
+        <View style={[styles.tab_indicate, styles.tab]} />
       </View>
     </>
   );
@@ -40,7 +47,7 @@ export default Main;
 const styles = StyleSheet.create({
   menu_tab: {
     width: '100%',
-    height: '20%',
+    height: '4%',
     backgroundColor: '#ddd',
     flexDirection: 'row',
     borderBottomWidth: 2,
@@ -63,9 +70,9 @@ const styles = StyleSheet.create({
   },
   tab_indicate: {
     position: 'absolute',
-    top: -4,
+    top: -5,
     width: '25%',
-    height: '100%',
-    backgroundColor: '#f00',
+    height: '30%',
+    backgroundColor: '#00f',
   },
 });
