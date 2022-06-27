@@ -5775,6 +5775,11 @@ react-native-codegen@^0.69.1:
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
 
+react-native-error-boundary@^1.1.14:
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/react-native-error-boundary/-/react-native-error-boundary-1.1.14.tgz#997676da8ef49d467820c5dd377ccc4a62ee2e6f"
+  integrity sha512-3pPCwn2aLtlI9ZN6OGCvFbsL3rNDrIwl0hEw/ZknUUCWss2MtEJ6dtmSX1KDSEwmRPJGYvucOqybhfaCNPcdCg==
+
 react-native-gradle-plugin@^0.0.7:
   version "0.0.7"
   resolved "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.7.tgz"

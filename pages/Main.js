@@ -1,7 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Container from './Container';
-import {useTabChange} from '../App';
 
 function MenuTab({tab, setTab}) {
   return (
@@ -9,14 +8,12 @@ function MenuTab({tab, setTab}) {
       <View style={styles.menu_tab}>
         <View
           testId="changeToHomeList"
-          style={styles.tab_item}
-          onClick={useTabChange('home')}>
+          style={styles.tab_item}>
           <Text style={styles.bdr}>홈</Text>
         </View>
         <View
           testId="changeToSearchList"
-          style={styles.tab_item}
-          onClick={useTabChange('search')}>
+          style={styles.tab_item}>
           <Text style={styles.bdr}>게임검색</Text>
         </View>
         <View testId="changeToFavoriteList" style={styles.tab_item}>

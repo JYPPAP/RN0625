@@ -19,6 +19,7 @@ function HeaderTop() {
           <View style={styles.logo}>
             <Image
               style={styles.logo_img}
+              alt="logo"
               source={require('../assets/images/Itemmania.png')}
             />
           </View>

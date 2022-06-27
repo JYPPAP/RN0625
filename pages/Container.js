@@ -10,14 +10,19 @@ import {
   SearchIcon,
   ChartIcon,
 } from './IconBox';
+import ErrorBoundary from 'react-native-error-boundary';
+
+const errorHandler = (error, stackTrace) => {};
 
 function Container() {
   const gameList = GameList;
 
   return (
-    <View style={styles.containers}>
-      <HomeList list={gameList} />
-    </View>
+    <ErrorBoundary onError={errorHandler}>
+      <View style={styles.containers}>
+        <HomeList list={gameList} />
+      </View>
+    </ErrorBoundary>
   );
 }
 
